@@ -94,6 +94,10 @@ header{
     border: solid 2px #f7b57f;
     position: sticky;
     top: 0px;
+    transition: all 0,5s;
+}
+.botonLink:hover{
+    background-color: rgb(114, 60, 175);
 }
 
 ul{
@@ -116,12 +120,21 @@ li{
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    transition: 0.5s;
+}
+.botonLink:hover{
+    background-color: rgb(114, 60, 175);
 }
 
 img{
     width: 200px;
     height: 200px;
     object-fit: contain;
+    transition: 1.5s;
+}
+
+img:hover{
+    transform: scale(1.1);
 }
 
 .icono{
