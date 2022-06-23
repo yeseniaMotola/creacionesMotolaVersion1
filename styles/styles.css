@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.gridInicio{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "inicioSeccion1 inicioSeccion1 inicioSeccion1"
+    "inicioSeccion2 inicioSeccion3 inicioSeccion4"
+    "footer footer footer";
+    grid-template-columns: 33% 34% 33%;
+    gap: 4px;
+}
+
+header{
+    grid-area: header;
+}
+.inicioSeccion1{
+    grid-area: inicioSeccion1;
+    background-image: url(../resources/logoCreacionesMotola.jpg);
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+.inicioSeccion2{
+    grid-area: inicioSeccion2;
+}.inicioSeccion3{
+    grid-area: inicioSeccion3;
+}.inicioSeccion4{
+    grid-area: inicioSeccion4;
+}
+footer{
+    grid-area: footer;
+}
+
+.grilla{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: auto;
+    gap: 20px;
+}
+
+.main{
+    grid-area: main;
+}
+
+.gridProductos{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "productosSeccion1 productosSeccion2"
+    "footer footer";
+    grid-template-columns: 50% 50%;
+    gap: 4px;
+}
+
+.productosSeccion1{
+    grid-area: productosSeccion1;
+}
+.productosSeccion2{
+    grid-area: productosSeccion2;
+}
+
+.gridNosotros{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nosotrosSeccion1 nosotrosSeccion2"
+    "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.nosotrosSeccion1{
+    grid-area: nosotrosSeccion1;
+}
+
+.nosotrosSeccion2{
+    grid-area: nosotrosSeccion2;
+}
+
+body{
+    background-color: #fffbef;
+    width: 100%;
+}
+
+header{
+    padding: 40px;
+    background-color: #f5b989;
+    box-shadow: 8px 8px 8px 8px #c26e2593;
+    border: solid 2px #f7b57f;
+    position: sticky;
+    top: 0px;
+}
+
+ul{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+.botonLink{
+    text-decoration: none;
+    background-color: #8181da;
+    font-family: 'Overpass', sans-serif;
+    color: #fffbef;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.icono{
+    width: 50px;
+    height: 50px;
+}
+
+.secciones{
+    height: fit-content;
+    background-color: #f5b989;
+    padding: 100px;
+    color: #914e10;
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px 8px #c26e2593;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.producto{
+    height: fit-content;
+    width: fit-content;
+    background-color: #fffbef;
+    color: #914e10;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.titulos{
+    background-color: #8181da;
+    font-family: 'Overpass', sans-serif;
+    color: #fffbef;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p{
+    font-family: 'Roboto Flex', sans-serif;
+    color: #914e10;
+    margin: 5px;
+    text-align: center;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.formularioInput{
+    border: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    width: 90%;
+}
+
+.formularioSelect{
+    padding: 1rem;
+    border: 2px solid #8181da;
+    border-radius: 2rem;
+}
+
+footer{
+    padding: 20px;
+    background-color: #f5b989;
+    box-shadow: inset 0px 0px 20px 0px #c26e2593;
+    border: solid 2px #f7b57f;
+}
+
+
+@media (max-width: 912px){
+
+    .gridInicio{
+        grid-template-areas: 
+        "header"
+        "inicioSeccion1"
+        "inicioSeccion2"
+        "inicioSeccion3" 
+        "inicioSeccion4"
+        "footer";
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .gridNosotros{
+        grid-template-areas: 
+        "header"
+        "nosotrosSeccion1" 
+        "nosotrosSeccion2"
+        "footer";
+        grid-template-columns:1fr;
+        gap: 2rem;
+    }
+
+    .gridProductos{
+        grid-template-areas: 
+        "header"
+        "productosSeccion1" 
+        "productosSeccion2"
+        "footer";
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .secciones{
+        margin: 60px;
+    }
+
+    .producto{
+        padding: 40px;
+    }
+} 
